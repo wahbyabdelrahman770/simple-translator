@@ -120,11 +120,9 @@ fromTextArea.addEventListener("input", () => {
     let value = fromTextArea.value;
     if (value !== "") {
         translateBtn.disabled = false;
-        clearBtn.disabled = false;
     }
     else {
         translateBtn.disabled = true;
-        clearBtn.disabled = true;
     }
 });
 
@@ -156,5 +154,4 @@ clearBtn.addEventListener("click", () => {
     fromTextArea.value = null;
     toTextArea.value = null;
     translateBtn.disabled = true;
-    clearBtn.disabled = true;
 });
