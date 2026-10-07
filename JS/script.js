@@ -113,6 +113,7 @@ const fromSelect = document.querySelector(".fromSelect");
 const toSelect = document.querySelector(".toSelect");
 const translateBtn = document.querySelector(".btn-outline-primary");
 const clearBtn = document.querySelector(".btn-outline-danger");
+const switchBtn = document.querySelector(".switch");
 let fromLang = "en-GB", toLang = "ar-SA";
 
 fromTextArea.addEventListener("input", () => {
@@ -133,6 +134,14 @@ fromSelect.addEventListener("change", (e) => {
 
 toSelect.addEventListener("change", (e) => {
     toLang = e.target.value;
+});
+
+switchBtn.addEventListener("click", () => {
+    let temp = fromSelect.value;
+    fromSelect.value = toSelect.value;
+    toSelect.value = temp;
+    fromLang = fromSelect.value;
+    toLang = toSelect.value;
 });
 
 translateBtn.addEventListener("click", () => {
