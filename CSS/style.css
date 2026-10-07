@@ -1,0 +1,10 @@
+.body {
+    width: 40em;
+}
+
+.fromTextArea,
+.toTextArea {
+    cursor: default;
+    width: 85%;
+    height: 60vh;
+}
